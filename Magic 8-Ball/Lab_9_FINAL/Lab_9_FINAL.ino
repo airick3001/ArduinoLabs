@@ -5,12 +5,14 @@ int buttonState = LOW;
 int lastbuttonState = LOW;
 const int LED = 7;
 const int LED2 = 6;
+const int LED3, = 5;
 
 void setup()  {
   Serial.begin(9600);
   pinMode(buttonPin, INPUT);
   pinMode(LED, OUTPUT);
   pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
 }
 
 void loop()  {
@@ -19,7 +21,7 @@ void loop()  {
   if (buttonState != lastbuttonState)  {  //If ButtonState is NOT = to last button state
     if (buttonState == LOW){
       led();
-      delay(700);
+      delay(500);
     Response();
   } 
   
@@ -63,23 +65,38 @@ void Response ()  {
 }
 
 void led ()  {
+  digitalWrite(LED,HIGH);
   digitalWrite(LED2, LOW);
-  digitalWrite(LED, HIGH);
+  digitalWrite(LED3, HIGH);
+  delay(75);
+  digitalWrite(LED, LOW):
+  digitalWrite(LED2,HIGH);
+  digitalWrite(LED3, LOW);
+  delay(60);
+  digitalWrite(LED2, LOW);
+  digitalWrite(LED, LOW);
+  digitalWrite(LED3, HIGH
   delay(20);
   digitalWrite(LED, LOW);
  digitalWrite(LED2, HIGH);
+ digitalWrite(LED3, LOW);
  delay(50);
- digitalWrite(LED2, LOW);
-  digitalWrite(LED, HIGH);
-  delay(100);
+ digitalWrite(LED2, HIGH);
   digitalWrite(LED, LOW);
+  digitalWrite(LED3, LOW);
+  delay(100);
+  digitalWrite(LED, HIGH;
  digitalWrite(LED2, HIGH);
- delay(200);
- digitalWrite(LED, HIGH);
- digitalWrite(LED2, HIGH);
- delay(1200);
+ digitalWrite (LED3, HIGH);
+ delay(100);
  digitalWrite(LED, LOW);
  digitalWrite(LED2, LOW);
+ digitalWrite(LED3, LOW);
+ delay(100);
+ digitalWrite(LED, HIGH);
+ digitalWrite(LED2, HIGH);
+ digitalWrite(LED3, HIGH);
+ 
 }
 
   
